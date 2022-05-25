@@ -157,7 +157,7 @@ Login to Grafana with `admin` for the username and `prom-operator` for the passw
 3. Open Grafana in your web browser
     1. Create a new dashboard with 4 panels. The Prometheus datasource should already be added that you can pull data from. The Flask exporter exports metrics for your EC2 instances provisioned during the install. Please note, while making the panel display the information in a way that makes sense (percentage, milliseconds, etc.) is also good, it is not necessarily a requirement. The backend query and data representation is more important. Same goes for colors and type of graph displayed.
     2. Create the 4 SLO/SLI panels as defined in the SLO/SLI document. The 4 panel categories will be availability (availability), remaining error budget (error budget), successful requests per second (throughput), and 90th percentile requests finish in this time (latency). See the following for more information on potential metrics to use https://github.com/rycus86/prometheus_flask_exporter
-        - **NOTE**: You will not see the goal SLO numbers in your dashboard and that is fine. The application doesn't have enough traffic or time to generate a 99% availabiliy or have an error budget that works.
+        - **NOTE**: You will not see the goal SLO numbers in your dashboard   and that is fine. The application doesn't have enough traffic or time to generate a 99% availabiliy or have an error budget that works.
     3. Please submit your Prometheus queries you use for you dashboards in the `prometheus_queries.md` file [linked here](prometheus_queries.md).
     4. Please take a screenshot of your created dashboard and include that as part of your submission for the project.
 
