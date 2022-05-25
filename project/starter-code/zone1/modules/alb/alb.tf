@@ -2,7 +2,7 @@ resource "aws_lb_target_group" "udacity" {
   name     = "udacity-lb-tg"
   port     = 80
   protocol = "HTTP"
-  vpc_id   = vpc_west.vpc_id
+  vpc_id   = var.vpc_west.vpc_id
 }
 
 resource "aws_lb_target_group_attachment" "udacity" {
@@ -17,7 +17,7 @@ resource "aws_lb" "udacity" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.ec2_sg]
-  subnets            = vpc_west.public_subnet_ids
+  subnets            = var.vpc_west.public_subnet_ids
 
   enable_deletion_protection = false
 
